@@ -7,9 +7,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <style type="text/css">
 html {height: 100%;}
-body {
-	bgcolor:black;
-}
 h1 {
 	font-family: Arial, Helvetica, sans-serif;
 	color: #962300;
@@ -42,7 +39,7 @@ p {
 }
 </style>
 
-  <title>Endless</title>
+  <title>Endless Muffet</title>
 
 	<script>
 	   	// Detection des ancien navigateurs qui ne supportent pas l'element Canvas
@@ -56,28 +53,11 @@ p {
   	<!-- EXTRASOURCES -->
 	<!-- Charge le code Javascript...-->
   	<script src="src/Runtime.js"></script>
-  	
-  <script>
 
-	// Detecte si le code HTML est lance localement
-	// Vous pouvez enlever ce code pour la version finale
-	if (window.location.protocol == "file:")
-	{
-		document.write('<div id="bloctxt">');
-		document.write("<h1>Impossible de lancer l'application...</h1>");
-		document.write("<p>Les navigateurs Internet modernes ne vous permettent pas de lancer des pages Web <br>directement a partir de l'ordinateur.<br>");
-		document.write("Un glisser-deposer d'un fichier HTML ne fonctionnera pas plus, quelle que soit la machine.<br>");
-		document.write("Utilisez l'option Construire & Lancer pour tester votre application (elle lance un serveur Web local),<br>") 
-		document.write("ou t&eacutel&eacutechargez votre application sur un serveur Web...</p>");
-		document.write('</div>');
-		throw new error("Cannot run application");
-	}
-
-  </script>
 </head>
 
 <!-- L'element Canvas qui va contenir notre application est cree ici...-->
-<body>
+<body bgcolor="000000">
     <div id="wrapper">
 	    <div id="border">
 		    <div id="canvas">
