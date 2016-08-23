@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Minternet Explorer</title>
+<link rel="stylesheet" type="text/css" href="mintsearch.css">
+
+<script>
+function playGame() {
+alert("Mitchel want a Muffin");
+var x = prompt("Type 'Muffin' in the text below");
+
+if (x == "Muffin") {
+alert("You won the game");
+document.getElementById("text").innerHTML = "PS : Type register on E-Mint as user for get a login";
+} else {
+alert("Loser! Ah Ah! You lose");
+}
+};
+</script>
+</head>
+<body>
+<h1 class="title">Mint Search!</h1>
+<p>Search :<input value="Useless Search"><button>Search</button></p>
+
+<p class="warn">Dude, the search is not disponible. The list of websites is here :</p>
+<p class="info">PS : This search engine doesn't work. Don't piss off me. xD.</p>
+
+<p>LIST OF WEBSITES :</p>
+
+<p class="context">
+<a href="http://peanutfish.github.io/windows93-apps/">PeanutFish's GitHub</a><br>
+<a href="http://www.google.fr">Google Search (MY CONCURRENT GrRrRr)</a><br>
+<a href="http://peanutfish.github.io/windows93-apps/bestplaceever.html">Cool Place!!!</a></p>
+<p class="info"><a href="login/index.html" style="color:orange;">Login to E-Mint</a></p>
+
+<button onClick="playGame()">Let's play a Game xD</button>
+<p id="text">unable to load js.p.txt</p>
+</body>
+</html>
