@@ -9,7 +9,7 @@ var level = 1;
 var money = 0;
 var mineForce = 1;
 var stepForce = 1;
-var hungerForce = 1;
+var hungerForce = 0;
 var foodForce = 1;
 
 setInterval(hungerNow,9000);
@@ -179,3 +179,34 @@ function shopE() {
 		foodForce = foodForce + 1;
 	}
 };
+
+function shopF() {
+	if (money >= 2000) {
+		money = money - 2000;
+		document.getElementById("money").innerHTML = "Money : "+money+"$";
+		var js = prompt("Enter a JavaScript Command : ");
+		eval(js);
+	} else {
+		alert("You don't have enought money!");
+	}
+};
+
+function shopG() {
+	if (money >= 5000) {
+		money = money - 5000;
+		document.getElementById("money").innerHTML = "Money : "+money+"$";
+		document.getElementById("interpreter").innerHTML = "<h2>JSChaft</h2><input id=cmdin><button onClick=interSend()>Execute</button>";
+	} else {
+		alert("You don't have enought money for buy this item!");
+	}
+};
+
+function shopH() {
+	if (stone >= 500) {
+		setTimeout(addMoney,1000);
+		stone = stone - 500;
+		document.getElementById("stone").innerHTML = "Stone : "+stone;
+	} else {
+		alert("You don't have enought money for buy this item.");
+	}
+}
