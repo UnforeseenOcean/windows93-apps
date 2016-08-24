@@ -1,0 +1,31 @@
+h1 {
+color:lightGreen;
+font-family:"Lucida Console",Monaco,monospace;
+text-align:center;
+}
+
+button {
+color:lightGreen;
+font-family:"Lucida Console",Monaco,monospace;
+background-color:black;
+text-align:center;
+}
+
+.info {
+border-style:outset;
+background-color:grey;
+color:white;
+font-family:"Lucida Console",Monaco,monospace;
+}
+
+p.menu {
+text-align:center; 
+font-family:Monaco,monospace; 
+color:lightGreen;
+}
+
+p {
+font-family:"Lucida Console",Monaco,monospace;
+color:white;
+text-align:center;
+}
