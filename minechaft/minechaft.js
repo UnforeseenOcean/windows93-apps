@@ -143,3 +143,4 @@ document.getElementById("money").innerHTML = "Money : "+money+"$";
 } else {
 alert("You don't have enought money for buy this item.");
 }
+};
