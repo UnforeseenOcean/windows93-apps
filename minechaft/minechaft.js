@@ -24,7 +24,7 @@ xp = xp + 25;
 steps = steps + 1;
 block = 1;
 ennemy = 0;
-money = money + 2
+money = money + 2;
 food = food + 1;
 
 document.getElementById("xp").innerHTML = "XPs : "+xp;
