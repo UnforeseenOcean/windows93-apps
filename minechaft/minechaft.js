@@ -11,6 +11,7 @@ var mineForce = 1;
 var stepForce = 1;
 var hungerForce = 0;
 var foodForce = 1;
+var hungerLevel = 10;
 
 setInterval(hungerNow,9000);
 setInterval(spawnEnnemy,10000);
@@ -93,8 +94,8 @@ document.getElementById("food").innerHTML = "Food : "+food;
 document.getElementById("infos").innerHTML = "You have nothing to eat.";
 };
 
-if (hunger > 10) {
-hunger = 10;
+if (hunger > hungerLevel) {
+hunger = hungerLevel;
 }
 };
 
@@ -104,6 +105,7 @@ function verifyXP() {
 if (xp > 1000) {
 level = level + 1;
 hungerForce = hungerForce + 0.15;
+hungerLevel = hungerLevel + 2;
 document.getElementById("infos").innerHTML = "Level Up! You're level"+level+" now!";
 document.getElementById("level").innerHTML = "Level "+level;
 xp = xp - 1000;
@@ -180,12 +182,14 @@ function shopE() {
 	}
 };
 
+//
+
 function shopF() {
-	if (money >= 2000) {
-		money = money - 2000;
+	if (money >= 530) {
+		money = money - 550;
 		document.getElementById("money").innerHTML = "Money : "+money+"$";
-		var js = prompt("Enter a JavaScript Command : ");
-		eval(js);
+		document.getElementById("infos").innerHTML = "Auto-Eat Bought!";
+		setInterval(function() {if (hunger < 9) {hunger = hungerLevel; document.getElementById("hunger").innerHTML = "Hunger : "+hunger;}},100);
 	} else {
 		alert("You don't have enought money!");
 	}
@@ -194,8 +198,7 @@ function shopF() {
 function shopG() {
 	if (money >= 5000) {
 		money = money - 5000;
-		document.getElementById("money").innerHTML = "Money : "+money+"$";
-		document.getElementById("interpreter").innerHTML = "<h2>JSChaft</h2><input id=cmdin><button onClick=interSend()>Execute</button>";
+		alert("I take your money. But you have nothing! xD!!!")
 	} else {
 		alert("You don't have enought money for buy this item!");
 	}
@@ -206,7 +209,15 @@ function shopH() {
 		setTimeout(addMoney,1000);
 		stone = stone - 500;
 		document.getElementById("stone").innerHTML = "Stone : "+stone;
+		document.getElementById("infos").innerHTML = "Salary Bought!"
 	} else {
 		alert("You don't have enought money for buy this item.");
 	}
-}
+};
+
+//Salary Function
+
+function addMoney() {
+	money = money + 1;
+	document.getElementById("money").innerHTML = "Money : "+money+"$";
+};
