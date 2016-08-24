@@ -206,7 +206,7 @@ function shopG() {
 
 function shopH() {
 	if (stone >= 500) {
-		setTimeout(addMoney,1000);
+		setInterval(addMoney,1000);
 		stone = stone - 500;
 		document.getElementById("stone").innerHTML = "Stone : "+stone;
 		document.getElementById("infos").innerHTML = "Salary Bought!"
