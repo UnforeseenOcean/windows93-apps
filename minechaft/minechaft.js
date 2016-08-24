@@ -10,6 +10,7 @@ var money = 0;
 var mineForce = 1;
 var stepForce = 1;
 var hungerForce = 1;
+var foodForce = 1;
 
 setInterval(hungerNow,9000);
 setInterval(spawnEnnemy,10000);
@@ -25,7 +26,7 @@ steps = steps + 1;
 block = 1;
 ennemy = 0;
 money = money + 2;
-food = food + 1;
+food = food + foodForce;
 
 document.getElementById("xp").innerHTML = "XPs : "+xp;
 document.getElementById("steps").innerHTML = "Steps : "+steps;
@@ -130,17 +131,51 @@ alert("You don't have enought money for buy this item.");
 //Super Speed
 
 function shopB() {
-alert("WIP");
+
+if (stone >= 1200) {
+	document.getElementById("infos").innerHTML = "Super Speed bought!";
+	stone = stone - 1200;
+	stepForce = stepForce + 5;
+} else {
+	alert("You don't have enough money to buy this item.")
+}
 };
 
 function shopC() {
 
 if (money >= 100) {
-document.getElementById("infos").innerHTML = "Food SUpply Bought!";
+document.getElementById("infos").innerHTML = "Food Supply Bought!";
 money = money - 100;
 food = food + 75;
 document.getElementById("money").innerHTML = "Money : "+money+"$";
+document.getElementById("food").innerHTML = "Food : "+food;
 } else {
-alert("You don't have enought money for buy this item.");
+alert("You don't have enough money to buy this item.");
 }
+};
+
+//Life Stone Powerup
+
+function shopD() {
+	
+	if (money >= 350) {
+		document.getElementById("infos").innerHTML = "Life Stone Powerup Bought!";
+		money = money - 350;
+		mineForce = mineForce + 1;
+		document.getElementById("money").innerHTML = "Money : "+money+"$";
+	}  else {
+		alert("You don't have enought money to buy this item.");
+	}
+};
+
+//Extra-Meat Sword
+
+function shopE() {
+	
+	if (money >= 210) {
+		document.getElementById("infos").innerHTML = "Extra-Meat Sword Bought!";
+		money = money - 210;
+		document.getElementById("money").innerHTML = "Money : "+money+"$";
+		foodForce = foodForce + 1;
+	}
 };
