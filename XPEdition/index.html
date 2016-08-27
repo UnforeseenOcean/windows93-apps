@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+<title>XP Edition.</title>
+<script>
+setInterval(addPopup,500);
+
+function addPopup() {
+var a = Math.floor(Math.random() * 256);
+var b = Math.floor(Math.random() * 256);
+document.getElementById("content").innerHTML += '<div class="img" style="left: '+a+'; top: '+b+';"<img src="help.png">';
+}
+</script>
+<style>
+div.class {
+position: absolute;
+}
+</style>
+</head>
+<body>
+<div id="content"></div>
+</body>
+</html>
