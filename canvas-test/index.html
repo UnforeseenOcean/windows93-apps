@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ATARI Canvas Test</title>
+<script>
+var x = 0;
+var c = document.getElementById("atari");
+var ctx = c.getContext("2d");
+
+actuCanvas();
+
+function goLeft() {
+x = x - 32;
+actuCanvas();
+};
+
+function goRight() {
+x = x + 32;
+actuCanvas();
+};
+
+function actuCanvas() {
+ctx.fillRect(x,250,32,32);
+};
+</script>
+</head>
+<body>
+<canvas id="atari" width=500 height=500>
+
+CANVAS!!!
+
+</canvas>
+<p><button onClick="goLeft()"><=</button><button onClick="goRight()">=></button></p>
+</body>
+</html>
