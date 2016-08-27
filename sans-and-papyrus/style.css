@@ -1,0 +1,53 @@
+div.imgPos {
+font-family: "Determination Sans", Fixedsys, sans-serif;
+
+position: absolute;
+left: 256px;
+top: 20px;
+}
+
+div.sans_text {
+position: absolute;
+left: 480px;
+top: 35px;
+font-family: "Determination Sans",Fixedsys, sans-serif;
+font-size: 21px;
+color: white
+}
+
+div.box {
+position: absolute;
+left: 256px;
+top: 300px;
+width: 500px;
+height: 125px;
+border-style: solid;
+border-color: white;
+}
+
+div.message {
+margin-top:16px;
+margin-bottom:16px;
+margin-right:16px;
+margin-left:16px;
+font-family: "Determination Sans", Fixedsys, sans-serif;
+font-size: 21px;
+color: white;
+}
+
+div.act {
+position: absolute;
+left: 280px;
+top: 440px;
+font-family: "Determination Sans", Fixedsys, sans-serif;
+color: white;
+}
+
+span.a {
+color: cyan;
+}
+
+@font-face {
+    font-family: 'Determination Sans';
+    src: url('DeterminationMonoWeb.woff') format('woff');
+}
