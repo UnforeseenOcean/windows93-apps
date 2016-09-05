@@ -12,6 +12,8 @@ var stepForce = 1;
 var hungerForce = 0;
 var foodForce = 1;
 var hungerLevel = 10;
+var moneypersec = 0;
+var health = 20;
 
 setInterval(hungerNow,9000);
 setInterval(spawnEnnemy,10000);
@@ -21,7 +23,7 @@ setInterval(verifyXP,1000);
 function attackBlock() {
 
 if (ennemy == 1) {
-document.getElementById("infos").innerHTML = "You attacked the ennemy. You earned 1 food and 25 XP";
+document.getElementById("infos").innerHTML = "You attacked the ennemy.";
 xp = xp + 25;
 steps = steps + 1;
 block = 1;
@@ -49,8 +51,8 @@ document.getElementById("infos").innerHTML = "You're starving.";
 };
 
 if (hunger <= 0) {
-document.write("<h1>Dead!</h1>");
-document.write("Dead of starving!");
+health = health - 1;
+document.getElementById("health").innerHTML = "Health : "+health;
 }
 };
 
@@ -58,7 +60,7 @@ document.write("Dead of starving!");
 function mineBlock() {
 
 if (block == 1) {
-document.getElementById("infos").innerHTML = "You mined. You earned 1 stone and 5 XPs";
+document.getElementById("infos").innerHTML = "You mined.";
 money = money + 0.5
 xp = xp + 5;
 stone = stone + mineForce;
@@ -210,6 +212,8 @@ function shopH() {
 		stone = stone - 500;
 		document.getElementById("stone").innerHTML = "Stone : "+stone;
 		document.getElementById("infos").innerHTML = "Salary Bought!"
+		moneypersec = moneypersec + 2;
+		document.getElementById("mps").innerHTML = "Money/s : "+moneypersec;
 	} else {
 		alert("You don't have enought money for buy this item.");
 	}
@@ -218,6 +222,6 @@ function shopH() {
 //Salary Function
 
 function addMoney() {
-	money = money + 1;
+	money = money + 2;
 	document.getElementById("money").innerHTML = "Money : "+money+"$";
 };
