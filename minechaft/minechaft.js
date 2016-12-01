@@ -13,7 +13,6 @@ var hungerForce = 0;
 var foodForce = 1;
 var hungerLevel = 10;
 var moneypersec = 0;
-var health = 20;
 
 setInterval(hungerNow,9000);
 setInterval(spawnEnnemy,10000);
@@ -113,6 +112,12 @@ document.getElementById("level").innerHTML = "Level "+level;
 xp = xp - 1000;
 }
 };
+
+function Glitchy() {
+	food = Math.random() * 6;
+	level = level + food;
+	hungerForce = hungerForce + 1;
+}
 
 //Minechaft Shop Functions
 
@@ -217,6 +222,11 @@ function shopH() {
 	} else {
 		alert("You don't have enought money for buy this item.");
 	}
+};
+
+function shopI() {
+		alert("It'll make your life a hell");
+		setInterval(Glitchy,1000);
 };
 
 //Salary Function
