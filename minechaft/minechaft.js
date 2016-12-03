@@ -51,7 +51,12 @@ document.getElementById("infos").innerHTML = "You're starving.";
 
 if (hunger <= 0) {
 health = health - 1;
-document.getElementById("health").innerHTML = "Health : "+health;
+alert("You are dead!");
+document.write("Refresh for replay.<br>");
+document.write("<h1>FINAL SCORE</h1>");
+document.write("<br>Money : "+money);
+document.write("<br>Stone : "+stone);
+document.write("<br>Level : "+level);
 }
 };
 
