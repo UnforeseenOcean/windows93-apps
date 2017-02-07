@@ -88,7 +88,7 @@ function mineBlock() {
 if (block == 1) {
 document.getElementById("infos").innerHTML = "You mined.";
 money = money + 0.5
-xp = xp + ;
+xp = xp + xppow;
 stone = stone + mineForce;
 steps = steps + stepForce;
 
