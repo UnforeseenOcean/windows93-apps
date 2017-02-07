@@ -64,8 +64,7 @@ document.write("<br>Level : "+level);
 };
 
 function hpNow() {
-hunger = hunger - hungerForce;
-document.getElementById("hp").innerHTML = "Hunger : "+hunger;
+document.getElementById("HP").innerHTML = "HP : "+hp;
 
 if (hp < 4) {
 document.getElementById("infos").innerHTML = "You're going to die.";
