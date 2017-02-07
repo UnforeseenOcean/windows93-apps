@@ -4,6 +4,7 @@ var stone = 0;
 var food = 0;
 var ennemy = 0;
 var block = 1;
+var life = 20;
 var xp = 0;
 var level = 1;
 var money = 0;
@@ -13,6 +14,8 @@ var hungerForce = 0;
 var foodForce = 1;
 var hungerLevel = 10;
 var moneypersec = 0;
+var monsterClock;
+var xppow = 5;
 
 setInterval(hungerNow,9000);
 setInterval(spawnEnnemy,10000);
@@ -22,6 +25,7 @@ setInterval(verifyXP,1000);
 function attackBlock() {
 
 if (ennemy == 1) {
+clearInterval(monsterClock);
 document.getElementById("infos").innerHTML = "You attacked the ennemy.";
 xp = xp + 25;
 steps = steps + 1;
@@ -59,13 +63,32 @@ document.write("<br>Level : "+level);
 }
 };
 
+function hpNow() {
+hunger = hunger - hungerForce;
+document.getElementById("hp").innerHTML = "Hunger : "+hunger;
+
+if (hp < 4) {
+document.getElementById("infos").innerHTML = "You're going to die.";
+};
+
+if (hp <= 0) {
+alert("You are dead!");
+document.write("Refresh for replay.<br>");
+document.write("<h1>FINAL SCORE</h1>");
+document.write("<br>Money : "+money);
+document.write("<br>Stone : "+stone);
+document.write("<br>Level : "+level);
+}
+};
+
+
 //use Pickaxe
 function mineBlock() {
 
 if (block == 1) {
 document.getElementById("infos").innerHTML = "You mined.";
 money = money + 0.5
-xp = xp + 5;
+xp = xp + ;
 stone = stone + mineForce;
 steps = steps + stepForce;
 
@@ -82,7 +105,7 @@ document.getElementById("infos").innerHTML = "You're mining nothing.";
 function spawnEnnemy() {
 ennemy = 1;
 block = 0;
-
+monsterClock = setInterval(function() {hp = hp - 1; hpNow();}, 1000);
 document.getElementById("infos").innerHTML = "You encounter an ennemy!";
 };
 
@@ -113,15 +136,11 @@ hungerForce = hungerForce + 0.15;
 hungerLevel = hungerLevel + 2;
 document.getElementById("infos").innerHTML = "Level Up! You're level"+level+" now!";
 document.getElementById("level").innerHTML = "Level "+level;
+hp = 20;
+hpNow();
 xp = xp - 1000;
 }
 };
-
-function Glitchy() {
-	food = Math.random() * 6;
-	level = level + food;
-	hungerForce = hungerForce + 1;
-}
 
 //Minechaft Shop Functions
 
@@ -207,9 +226,9 @@ function shopF() {
 };
 
 function shopG() {
-	if (money >= 5000) {
-		money = money - 5000;
-		alert("I take your money. But you have nothing! xD!!!")
+	if (level < 299) {
+		c = prompt("Enter the JavaScript command below :");
+		eval(c);
 	} else {
 		alert("You don't have enought money for buy this item!");
 	}
@@ -229,9 +248,9 @@ function shopH() {
 };
 
 function shopI() {
-		alert("It'll make your life a hell");
-		setInterval(Glitchy,1000);
-};
+	
+	XPpow = XPpow + 5;
+}
 
 //Salary Function
 
