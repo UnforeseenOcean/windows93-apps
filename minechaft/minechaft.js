@@ -4,7 +4,6 @@ var stone = 0;
 var food = 0;
 var ennemy = 0;
 var block = 1;
-var hp = 20;
 var xp = 0;
 var level = 1;
 var money = 0;
@@ -63,23 +62,6 @@ document.write("<br>Level : "+level);
 }
 };
 
-function hpNow() {
-document.getElementById("HP").innerHTML = "HP : "+hp;
-
-if (hp < 4) {
-document.getElementById("infos").innerHTML = "You're going to die.";
-};
-
-if (hp <= 0) {
-alert("You are dead!");
-document.write("Refresh for replay.<br>");
-document.write("<h1>FINAL SCORE</h1>");
-document.write("<br>Money : "+money);
-document.write("<br>Stone : "+stone);
-document.write("<br>Level : "+level);
-}
-};
-
 
 //use Pickaxe
 function mineBlock() {
@@ -104,7 +86,6 @@ document.getElementById("infos").innerHTML = "You're mining nothing.";
 function spawnEnnemy() {
 ennemy = 1;
 block = 0;
-monsterClock = setInterval(function() {hp = hp - 1; hpNow();}, 1000);
 document.getElementById("infos").innerHTML = "You encounter an ennemy!";
 };
 
