@@ -117,8 +117,8 @@ hungerLevel = hungerLevel + 2;
 document.getElementById("infos").innerHTML = "Level Up! You're level"+level+" now!";
 document.getElementById("level").innerHTML = "Level "+level;
 hp = 20;
-hpNow();
 xp = 0;
+document.getElementById("xp").innerHTML = "XPs : "+xp;
 }
 };
 
