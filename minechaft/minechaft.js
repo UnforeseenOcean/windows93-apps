@@ -118,7 +118,7 @@ document.getElementById("infos").innerHTML = "Level Up! You're level"+level+" no
 document.getElementById("level").innerHTML = "Level "+level;
 hp = 20;
 hpNow();
-xp = xp - 1000;
+xp = 0;
 }
 };
 
@@ -228,8 +228,14 @@ function shopH() {
 };
 
 function shopI() {
-	
-	XPpow = XPpow + 5;
+	if (money >= 75) {
+		xppow = xppow + 5;
+		money = money - 75;
+		document.getElementById("stone").innerHTML = "Money : "+money+"$";
+		document.getElementById("infos").innerHTML = "XP Power Up!";
+	} else {
+		alert("You don't have enought money for buy this item.");
+	}
 }
 
 //Salary Function
