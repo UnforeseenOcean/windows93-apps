@@ -24,8 +24,12 @@ function startGen() {
       }
       
       if (tmpB == 4) {
-        document.write("
+        document.write("document.write(" + tmp + ");<br>");
       }
-    }
+      
+      if (tmpB == 5) {
+        document.write("document.write(\"<h1>OH BOI</h1>\");<br>");
+      }
+      document.write("func" + Math.floor((Math.random() * 5) + 1 + "();<br>}<br><br>");
   }
 }
