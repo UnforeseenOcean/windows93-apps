@@ -1,11 +1,14 @@
 function startGen() {
-  var t = prompt("Enter the number of functions :");
-  var l = prompt("Enter the number of lines per functions :");
+  var te = prompt("Enter the number of functions :");
+  var le = prompt("Enter the number of lines per functions :");
   var tmp;
   var tmpB;
   
+  var t = parseInt(te);
+  var l = parseInt(le);
+  
   for (var i = 0; i == t; i++) {
-    tmp = "func" + i;
+    tmp = "func" + i.toString();
     document.write("function "+tmp+"() {<br>");
     
     for (var j = 0; j == l; j++) {
