@@ -4,6 +4,9 @@ function startGen() {
   var tmp;
   var tmpB;
   
+  var i;
+  var j;
+  
   var t = parseInt(te);
   var l = parseInt(le);
   
