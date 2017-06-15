@@ -10,11 +10,11 @@ function startGen() {
   var t = parseInt(te);
   var l = parseInt(le);
   
-  for (var i = 0; i == t; i++) {
+  for (var i = 0; i < (t + 1); i++) {
     tmp = "func" + i.toString();
     document.write("function "+tmp+"() {<br>");
     
-    for (var j = 0; j == l; j++) {
+    for (var j = 0; j < (l + 1); j++) {
       tmpB = Math.floor((Math.random() * 5) + 1);
       
       if (tmpB == 1) {
