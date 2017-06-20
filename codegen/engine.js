@@ -22,7 +22,7 @@ function startGen() {
       }
       
       if (tmpB == 2) {
-       document.write("var v" + i + " = " + Math.floor(Math.random() * 100) + ";");
+       document.write("var v" + i + " = " + Math.floor(Math.random() * 100) + ";<br>");
       }
       
       if (tmpB == 3) {
@@ -34,7 +34,7 @@ function startGen() {
       }
       
       if (tmpB == 5) {
-        document.write("document.write(\"<h1>OH BOI</h1>\");<br>");
+        document.write("document.write(\"OH BOI\");<br>");
       }
       
   }
