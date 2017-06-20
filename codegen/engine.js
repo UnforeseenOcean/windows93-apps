@@ -10,11 +10,11 @@ function startGen() {
   var t = parseInt(te);
   var l = parseInt(le);
   
-  for (var i = 0; i < (t + 1); i++) {
+  for (var i = 1; i < (t + 1); i++) {
     tmp = "func" + i.toString();
     document.write("function "+tmp+"() {<br>");
     
-    for (var j = 0; j < (l + 1); j++) {
+    for (var j = 1; j < (l + 1); j++) {
       tmpB = Math.floor((Math.random() * 5) + 1);
       
       if (tmpB == 1) {
@@ -36,8 +36,9 @@ function startGen() {
       if (tmpB == 5) {
         document.write("document.write(\"<h1>OH BOI</h1>\");<br>");
       }
-      document.write("func" + Math.floor((Math.random() * 5) + 1) + "();<br>}<br><br>");
+      
   }
+    document.write("func" + Math.floor((Math.random() * 5) + 1) + "();<br>}<br><br>");
 }
 
 }
