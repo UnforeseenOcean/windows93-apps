@@ -1,3 +1,3 @@
-# windows93-apps
-Here is some HTML codes designed for Windows 93 (go v2.windows93.net)
-Voici quelques codes HTML fait pour WIndows 93 (go v2.windows93.net)
+# HTML Development and Experiments
+
+This repository includes all my HTML Development. My biggest project in this repository is Minechaft. (I think i will make a repository for this program)
