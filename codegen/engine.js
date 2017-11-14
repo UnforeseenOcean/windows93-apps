@@ -18,7 +18,7 @@ function startGen() {
       tmpB = Math.floor((Math.random() * 5) + 1);
       
       if (tmpB == 1) {
-        document.write("alert(\"" + tmp + " is active\";<br>");
+        document.write("alert(\"" + tmp + " is active\");<br>");
       }
       
       if (tmpB == 2) {
