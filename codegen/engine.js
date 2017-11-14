@@ -38,7 +38,7 @@ function startGen() {
       }
       
   }
-    document.write("func" + Math.floor((Math.random() * 5) + 1) + "();<br>}<br><br>");
+    document.write("func" + Math.floor((Math.random() * t) + 1) + "();<br>}<br><br>");
 }
 
 }
