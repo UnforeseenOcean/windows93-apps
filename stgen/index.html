@@ -1,3 +1,20 @@
 <html>
-
+  <head>
+    <title>Random Sentence Generator</title>
+    <script src="engine.js"></script>
+    <style>
+      h1 {
+        text-align: center;
+        font-family: "Courrier New", monospace;
+      }
+      div {
+        border-style: inline;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Random Sentence Generator</h1>
+    <div id="choose-form">Please Choose the lenght : <button onClick="makeLong()">Long</button><button onClick="makeShort()">Short</button><br></div>
+    <div id="sentence-form"></div>
+  </body>
 </html>
