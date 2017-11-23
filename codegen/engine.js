@@ -15,26 +15,26 @@ function startGen() {
     document.write("function "+tmp+"() {<br>");
     
     for (var j = 1; j < (l + 1); j++) {
-      tmpB = Math.floor((Math.random() * 5) + 1);
+      tmpB = "  " + string(Math.floor((Math.random() * 5) + 1));
       
       if (tmpB == 1) {
-        document.write("alert(\"" + tmp + " is active\");<br>");
+        document.write("  alert(\"" + tmp + " is active\");<br>");
       }
       
       if (tmpB == 2) {
-       document.write("var v" + i + " = " + Math.floor(Math.random() * 100) + ";<br>");
+       document.write("   var v" + i + " = " + Math.floor(Math.random() * 100) + ";<br>");
       }
       
       if (tmpB == 3) {
-        document.write("alert(\"Randomized\");<br>");
+        document.write("  alert(\"Randomized\");<br>");
       }
       
       if (tmpB == 4) {
-        document.write("document.write(" + tmp + ");<br>");
+        document.write("  document.write(" + tmp + ");<br>");
       }
       
       if (tmpB == 5) {
-        document.write("document.write(\"OH BOI\");<br>");
+        document.write("  document.write(\"OH BOI\");<br>");
       }
       
   }
